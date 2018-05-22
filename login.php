@@ -38,12 +38,12 @@
 		  position: relative;
 		  min-height: 100%;
 
-		    background-image: url("/assets/img/fondo.jpg");/*#F1F1F1*/
+		    /*background-image: url("/assets/img/fondo.jpg");/*#F1F1F1*/
             background-position: center center;
             background-repeat: no-repeat;
             background-attachment: fixed;
             background-size: cover;
-            background-color: #004793;
+            /*background-color: #004793;*/
 		}
 
 		/* Animation Keyframes */
@@ -147,7 +147,7 @@
 		  padding: 10px;
 		  margin: -10px -10px 25px -10px;
 		  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-		  background: #003399/*#009688*/;
+		  background: #333333/*#009688*/;
 		  font-family: 'Roboto', sans-serif;
 		  font-size: 1.3rem;
 		  color: #FAFAFA;
@@ -232,7 +232,7 @@
 		  border-top: 1px solid rgba(0, 0, 0, 0.1);
 		}
 
-		.btn.form.amarillo.pull-right {
+		.btn.form.gris.pull-right {
 			width: 100%;
 		}
 
@@ -244,7 +244,7 @@
 	<div class="login-container">
     	<section class="login" id="login">
     		<header>
-    			<h2>Bienvenido a SEP UNAH</h2>
+    			<h2>Bienvenido</h2>
     			<h4>Por favor ingrese su usuario y clave</h4>
     		</header>
     		<form class="login-form" method="POST" action="index.php">
@@ -263,10 +263,7 @@
     				</label>
     			</div>
     			<div class="submit-container">
-    				<input type="submit" class="btn form amarillo pull-right" value="Ingresar">
-    				<!--<button class="btn form amarillo pull-right" ng-click="da()">
-        		        Recuperar Contraseña
-        	        </button>-->
+    				<input type="submit" class="btn form gris pull-right" value="Ingresar">
     			</div>
     		</form>
         </section>
