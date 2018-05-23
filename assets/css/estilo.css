@@ -294,7 +294,7 @@ a:hover, a:active {
 
 .card-encabezado{
 	/*background-color: #ffcc00;*/
-	background-color: #003399;
+	background-color: #333333;
     box-shadow: 0 12px 20px -10px rgba(0, 51, 153, 0.28),
 			    0 4px 20px 0px rgba(0, 0, 0, 0.12), 
 				0 7px 8px -5px rgba(0, 51, 153, 0.2);
@@ -452,6 +452,13 @@ a:hover, a:active {
 }
 .btn.azul:hover, .btn.azul:focus {
 	box-shadow: 0 14px 26px -12px rgba(0, 51, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 51, 153, 0.2);
+}
+
+.btn.azul:disabled,
+button[disabled]{
+	color: #FFFFFF;
+	background-color: #4d88ff;
+	box-shadow: 0 2px 2px 0 rgba(0, 51, 153, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 51, 153, 0.12);
 }
 .btn.amarillo {
 	background-color: #ffcc00;
