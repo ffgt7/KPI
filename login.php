@@ -151,7 +151,7 @@
           padding: 10px;
           margin: -10px -10px 25px -10px;
           border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-          background: #333333/*#009688*/;
+          background: #875A7B/*#009688*/;
           font-family: 'Roboto', sans-serif;
           font-size: 1.3rem;
           color: #FAFAFA;
@@ -236,7 +236,7 @@
           border-top: 1px solid rgba(0, 0, 0, 0.1);
         }
 
-        .btn.form.azul.pull-right {
+        .btn.form.odoo.pull-right {
             width: 100%;
         }
 
@@ -265,7 +265,7 @@
                     </label>
                 </div>
                 <div class="submit-container">
-                    <input type="submit" class="btn form azul pull-right" value="Ingresar">
+                    <input type="submit" class="btn form odoo pull-right" value="Ingresar">
                 </div>
             </form>
         </section>

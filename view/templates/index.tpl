@@ -29,7 +29,7 @@
                     <span ng-show="!indi.$pristine && indi.satisWork.$error.pattern" class="error letra">solo números</span>
                 </div>
             </div>
-            <button type="submit" class="btn form azul pull-right" ng-click="submitForm(formData)" ng-disabled="!indi.$valid">
+            <button type="submit" class="btn form odoo pull-right" ng-click="submitForm(formData)" ng-disabled="!indi.$valid">
                 <i class="fa fa-area-chart"></i>
                 Graficar
             </button>
