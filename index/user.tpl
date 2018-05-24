@@ -15,7 +15,7 @@
     <script src="./assets/js/util.js"></script>
     <script src="./assets/js/Chart.boundle.js"></script>
 
-    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./assets/css/bootstrap.min2.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/editable.css">
     <link rel="stylesheet" type="text/css" href="./assets/css/angular-datepicker.css">
     <script src="./assets/js/angular-datepicker.js"></script>
