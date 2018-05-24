@@ -1,4 +1,4 @@
-$(document).ready(function(){
+/*$(document).ready(function(){
     
 	function showMenu(){
 		$('.menu .side-bar').addClass('show');
@@ -20,7 +20,7 @@ $(document).ready(function(){
 		$('.side-bar li').removeAttr('class');
 		$(this).attr('class' ,'activo');			
 	});
-});
+});*/
 
 
 

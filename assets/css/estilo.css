@@ -239,11 +239,12 @@ a:hover, a:active {
 }
 /*****************Contenido********************/
 .contenido{
-	padding: 30px 15px;
+	padding: 50px 15px;
 	z-index:-1;
 	margin:0px;
-	margin-top:50px;
-	margin-left:260px;
+	margin-top:1px;
+	/*margin-left:260px;*/
+	margin-left:1px;
 	overflow:auto; 
 	border: 0px;
 	box-sizing: border-box;
@@ -285,7 +286,7 @@ a:hover, a:active {
 	display: inline-block;
     position: relative;
     width: 100%;
-    margin: 25px 0;
+    margin: 50px 0;
     box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.14);
     border-radius: 3px;
     color: rgba(0, 0, 0, 0.87);
@@ -483,15 +484,6 @@ button[disabled]{
 }
 
 .btn.amarillo:hover, .btn.amarillo:focus {
-	box-shadow: 0 14px 26px -12px rgba(0, 51, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 51, 153, 0.2);
-}
-
-.btn.gris {
-	background-color: #737373;
-	color: #FFFFFF;
-	box-shadow: 0 2px 2px 0 rgba(0, 51, 153, 0.14), 0 3px 1px -2px rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 51, 153, 0.12);
-}
-.btn.gris:hover, .btn.gris:focus {
 	box-shadow: 0 14px 26px -12px rgba(0, 51, 153, 0.42), 0 4px 23px 0px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 51, 153, 0.2);
 }
 
