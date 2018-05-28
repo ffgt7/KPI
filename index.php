@@ -1,17 +1,16 @@
 <?php
 	session_start();
-        if(isset($_SESSION['acceso']) && $_SESSION['acceso'] == 1){
-            require('index/user.tpl');
-        }else{
-            session_destroy();
+    if(isset($_SESSION['acceso']) && $_SESSION['acceso'] == 1){
+        require('index/user.tpl');
+    }else{
+        session_destroy();
 
-            $user = isset($_POST["usuario"])? $_POST["usuario"] : '';
-            $pass = isset($_POST["clave"])? $_POST["clave"]: '';
+        $user = isset($_POST["usuario"])? $_POST["usuario"] : '';
+        $pass = isset($_POST["clave"])? $_POST["clave"]: '';
 
-            validar($user, $pass);
+        validar($user, $pass);
 
-        }
-
+    }
 
 function validar($user, $pass){
     if(!empty($user) && !empty($pass)){
