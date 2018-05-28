@@ -5,6 +5,21 @@ app.controller('index', function($scope, $rootScope, $http) {
 
     $http({
         method: "POST",
+        url: "services/selectData.php",
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+        }
+    }).then(
+        function success(response) {
+            $scope.dataResult = response.data.dataR;
+        },
+        function error(response) {
+            alert('Se produjo un error');
+        }
+    );
+
+    $http({
+        method: "POST",
         url: "services/selectVaria.php",
         //data:$.param(formData),
         headers: {

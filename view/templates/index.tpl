@@ -47,7 +47,7 @@
             <p class="categoria">Indicadores de medición</p>
         </div>
         <div class="card-contenido tabla-responsive">
-            <table class="tabla" <!--ng-show="solicitudes.length"-->>
+            <table class="tabla" ng-show="dataResult.length">
                 <thead style="text-align:center">
                     <th>Fecha de registro</th>
                     <th>% satisfacción cliente interno</th>
@@ -57,16 +57,17 @@
                     <th>Meta</th>
                 </thead>
                 <tbody>
-                    <tr ng-click="cuentaVa(s.cuenta,s.fechEnvio,s.estado,s.id)" ng-repeat="s in solicitudes">
-                        <td>{{ s.cuenta }}</td>
-                        <td class="tdNombre">{{ s.nombre }}</td>
-                        <td ng-if="s.estado==1">Práctica</td>
-                        <td ng-if="s.estado==4">Egresado</td>
-                        <td ng-if="s.estado==10">40 Horas</td>
-                        <td><i class="fa fa-eye fa-2x"></i></td>
+                    <tr ng-repeat="d in dataResult">
+                        <td>{{d.regisDate}}</td>
+                        <td>{{d.var1}}</td>
+                        <td>{{d.var2}}</td>
+                        <td>{{d.var3}}</td>
+                        <td>{{d.idealResult}}</td>
+                        <td>{{d.metaResult}}</td>
                     </tr>
                 </tbody>
             </table>
+            <h3 ng-show="!dataResult.length">No hay historial.</h3>
         </div>
     </div>
 </div>
