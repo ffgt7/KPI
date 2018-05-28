@@ -15,10 +15,13 @@
 
 function validar($user, $pass){
     if(!empty($user) && !empty($pass)){
+        $data=array();
         if($user=='ffgt' && $pass=='1234') {
             session_start();
             $_SESSION["usuario"] = $user;
             $_SESSION['acceso']=1;
+            $data['department']='ict';
+            $_SESSION["data"]=$data;
             header("Location: index.php");
         }else{
             header("Location: login.php");

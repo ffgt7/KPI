@@ -4,7 +4,13 @@ app.controller('index', function($scope, $rootScope, $http) {
 
 	var tap=0;
     $scope.submitForm = function (formData){
-        $scope.showGrap=true;
+
+    }
+});
+
+////graph
+
+/*$scope.showGrap=true;
     	//datos=formData['satisClient'];
 
 		if(tap==0){
@@ -69,6 +75,4 @@ app.controller('index', function($scope, $rootScope, $http) {
 			options: chartOptions
 		});
         tap+=1;
-
-    }
-});
+*/
