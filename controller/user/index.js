@@ -3,6 +3,8 @@ app.controller('index', function($scope, $rootScope, $http) {
     $scope.showGrap=false;
     $scope.formData = {};
 
+    var listVaria;
+
     $http({
         method: "POST",
         url: "services/selectData.php",
@@ -28,6 +30,7 @@ app.controller('index', function($scope, $rootScope, $http) {
     }).then(
         function success(response) {
             $scope.variables= response.data;
+            $rootScope.listVaria= response.data;
         },
         function error(response) {
             alert('Se produjo un error al cargar las variables');
@@ -53,6 +56,8 @@ app.controller('index', function($scope, $rootScope, $http) {
             }
         );
     }
+
+    fuera=$rootScope.listVaria
 
 
 });
