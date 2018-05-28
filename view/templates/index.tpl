@@ -47,11 +47,14 @@
             <p class="categoria">Indicadores de medición</p>
         </div>
         <div class="card-contenido tabla-responsive">
-            <table class="tabla" ng-show="solicitudes.length">
+            <table class="tabla" <!--ng-show="solicitudes.length"-->>
                 <thead style="text-align:center">
                     <th>Fecha de registro</th>
-                    <th></th>
-                    <th>Tipo</th>
+                    <th>% satisfacción cliente interno</th>
+                    <th>% tiempos de entrega</th>
+                    <th>% indice de satisfacción laboral</th>
+                    <th>Resultado ideal</th>
+                    <th>Meta</th>
                 </thead>
                 <tbody>
                     <tr ng-click="cuentaVa(s.cuenta,s.fechEnvio,s.estado,s.id)" ng-repeat="s in solicitudes">
