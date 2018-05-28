@@ -11,7 +11,7 @@ app.controller('index', function($scope, $rootScope, $http) {
         }
     }).then(
         function success(response) {
-            $scope.dataResult = response.data.dataR;
+            $scope.dataResult = response.data;
         },
         function error(response) {
             alert('Se produjo un error');
