@@ -9,14 +9,30 @@
                 <div class="columna-4" ng-repeat="v in variables">
                     <div class="form-grupo form-texto-animado">
                         <input type="text" class="input-text" required name="var{{$index}}" ng-model="formData.varMedi[$index]" ng-pattern="/^[0-9.]*$/">
-                        <label for="nombre">{{v.nameVariable}}</label>
+                        <label for="nombre">% {{v.nameVariable}}</label>
                         <span ng-show="!indi.$pristine && indi.var{{$index}}.$error.required" class="error letra">campo requerido</span>
                         <span ng-show="!indi.$pristine && indi.var{{$index}}.$error.pattern" class="error letra">solo números</span>
                     </div>
                 </div>
+                <div class="columna-6">
+                    <div class="form-grupo form-texto-animado">
+                        <input type="text" class="input-text" required name="idealResult" ng-model="formData.idealResult" ng-pattern="/^[0-9.]*$/">
+                        <label for="nombre">Resultado ideal</label>
+                        <span ng-show="!indi.$pristine && indi.idealResult.$error.required" class="error letra">campo requerido</span>
+                        <span ng-show="!indi.$pristine && indi.idealResult.$error.pattern" class="error letra">solo números</span>
+                    </div>
+                </div>
+                <div class="columna-6">
+                    <div class="form-grupo form-texto-animado">
+                        <input type="text" class="input-text" required name="metaResult" ng-model="formData.metaResult" ng-pattern="/^[0-9.]*$/">
+                        <label for="nombre">Meta</label>
+                        <span ng-show="!indi.$pristine && indi.metaResult.$error.required" class="error letra">campo requerido</span>
+                        <span ng-show="!indi.$pristine && indi.metaResult.$error.pattern" class="error letra">solo números</span>
+                    </div>
+                </div>
                 <button type="submit" class="btn form odoo pull-right" ng-click="submitForm(formData)" ng-disabled="!indi.$valid">
-                    <i class="fa fa-area-chart"></i>
-                    Graficar
+                    <i class="fa fa fa-save"></i>
+                    Guardar
                 </button>
             </form>
         </div>
