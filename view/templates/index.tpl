@@ -6,14 +6,14 @@
         </div>
         <div class="card-contenido tabla-responsive">
             <form name="indi" novalidate>
-                <!--<div class="columna-4" ng-repeat="v in variables">
+                <div class="columna-4" ng-repeat="v in variables">
                     <div class="form-grupo form-texto-animado">
                         <input type="text" class="input-text" required name="var{{$index}}" ng-model="formData.resp2[$index]" ng-pattern="/^[0-9.]*$/">
                         <label for="nombre">% {{v.nameVariable}}</label>
                         <span ng-show="!indi.$pristine && indi.var{{$index}}.$error.required" class="error letra">campo requerido</span>
                         <span ng-show="!indi.$pristine && indi.var{{$index}}.$error.pattern" class="error letra">solo números</span>
                     </div>
-                </div>-->
+                </div>
                 <div class="columna-6">
                     <div class="form-grupo form-texto-animado">
                         <input type="text" class="input-text" required name="idealResult" ng-model="formData.idealResult" ng-pattern="/^[0-9.]*$/">
@@ -47,17 +47,16 @@
             <p class="categoria">Indicadores de medición</p>
         </div>
         <div class="card-contenido tabla-responsive">
-            <table class="tabla" ng-show="dataResult.length">
-                <thead style="text-align:center">
+            <form name="indiGraph" novalidate>
+                <table class="tabla" ng-show="dataResult.length">
+                    <thead style="text-align:center">
                     <th>Fecha de registro</th>
-                    <th>% satisfacción cliente interno</th>
-                    <th>% tiempos de entrega</th>
-                    <th>% indice de satisfacción laboral</th>
+                    <th ng-repeat="v in variables">% {{v.nameVariable}}</th>
                     <th>Resultado ideal</th>
                     <th>Meta</th>
-                </thead>
-                <tbody>
-                    <tr ng-repeat="d in dataResult">
+                    </thead>
+                    <tbody>
+                    <tr ng-click="madeGraph(d.var1,d.var2,d.var3,d.idealResult,d.metaResult)" ng-repeat="d in dataResult">
                         <td>{{d.regisDate}}</td>
                         <td>{{d.var1}}</td>
                         <td>{{d.var2}}</td>
@@ -65,8 +64,9 @@
                         <td>{{d.idealResult}}</td>
                         <td>{{d.metaResult}}</td>
                     </tr>
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </form>
             <h3 ng-show="!dataResult.length">No hay historial.</h3>
         </div>
     </div>
@@ -80,7 +80,7 @@
     <div class="columna-12">
         <div class="card-contenido">
             <div class="columna-12">
-                <canvas id="grafico" class="grafico" width="100%" height="40%"></canvas>
+                <canvas id="grafico" class="grafico" width="100%" height="25%"></canvas>
             </div>
         </div>
     </div>

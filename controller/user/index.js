@@ -37,7 +37,6 @@ app.controller('index', function($scope, $rootScope, $http) {
         }
     );
 
-	var tap=0;
     $scope.submitForm = function (formDat){
         mostrar=formDat['resp2'];
         $http({
@@ -57,26 +56,20 @@ app.controller('index', function($scope, $rootScope, $http) {
         );
     }
 
-    fuera=$rootScope.listVaria
+    var tap=0;
+    $scope.madeGraph=function (var1,var2,var3,ideal,meta) {
+        $scope.showGrap=true;
 
-
-});
-
-////graph
-
-/*$scope.showGrap=true;
-    	//datos=formData['satisClient'];
-
-		if(tap==0){
-			tap=1;
-		}
+        if(tap==0){
+            tap=1;
+        }
 
         var densityCanvas = document.getElementById("grafico");
 
 
         var satisData = {
             label: 'Linea base',
-            data: [formData['satisClient'], formData['timeEntre'], formData['satisWork']],
+            data: [var1,var2,var3],
             backgroundColor: 'gray',
             borderWidth: 0,
             yAxisID: "y-axis-satis"
@@ -84,7 +77,7 @@ app.controller('index', function($scope, $rootScope, $http) {
 
         var resulData = {
             label: 'Resultado ideal',
-            data: [70,70,70],
+            data: [ideal,ideal,ideal],
             backgroundColor: 'blue',
             borderWidth: 0,
             yAxisID: "y-axis-resul"
@@ -92,7 +85,7 @@ app.controller('index', function($scope, $rootScope, $http) {
 
         var metaData = {
             label: 'Meta',
-            data: [80,80,80],
+            data: [meta,meta,meta],
             backgroundColor: 'green',
             borderWidth: 0,
             yAxisID: "y-axis-meta"
@@ -124,9 +117,17 @@ app.controller('index', function($scope, $rootScope, $http) {
             chart.destroy();
         }
         chart = new Chart(densityCanvas, {
-			type: 'bar',
-			data: planetData,
-			options: chartOptions
-		});
+            type: 'bar',
+            data: planetData,
+            options: chartOptions
+        });
         tap+=1;
+    }
+
+
+});
+
+////graph
+
+/*
 */
