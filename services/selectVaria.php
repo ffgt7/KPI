@@ -1,6 +1,10 @@
 <?php
     include('includes/funciones.php');
     session_start();
-    $sql3="select count(mensaje) as num from mensajes where visto=0 and origen=0 and cuenta=?";
-    $json=select($sql3,array($_SESSION["data"]["cuenta"]));
-    echo json_encode($json);
+
+    $sql="select id from departments where department=?";
+    $json=select($sql,array($_SESSION["data"]["department"]));
+
+    $sql="select nameVariable from listvaria where fk_department=?";
+    $json2=selectAll($sql,array($json["id"]));
+    echo json_encode($json2);
