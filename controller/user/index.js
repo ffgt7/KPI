@@ -20,7 +20,21 @@ app.controller('index', function($scope, $rootScope, $http) {
 
 	var tap=0;
     $scope.submitForm = function (formData){
-
+        $http({
+            method: "POST",
+            url: "services/insertVaria.php",
+            data:$.param(formData),
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+            }
+        }).then(
+            function success(response) {
+                alert('Datos guardados correctamente');
+            },
+            function error(response) {
+                alert('Se produjo un error al cargar las variables');
+            }
+        );
     }
 
 
