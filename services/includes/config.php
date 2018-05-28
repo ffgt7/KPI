@@ -1,5 +1,5 @@
 <?php
-	$dbName='kpi_database';
+	$dbName='indicators';
 	$dbRoot='localhost';
 	$dbUser='root';
 	$dbPass='';

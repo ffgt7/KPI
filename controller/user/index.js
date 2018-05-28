@@ -2,10 +2,28 @@ app.controller('index', function($scope, $rootScope, $http) {
 	$rootScope.titulo = "Variables iniciales";
     $scope.showGrap=false;
 
+    $http({
+        method: "POST",
+        url: "services/selectVaria.php",
+        //data:$.param(formData),
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
+        }
+    }).then(
+        function success(response) {
+            $scope.correoCoor = response.data.correoInstitucional;
+        },
+        function error(response) {
+            alert('Se produjo un error');
+        }
+    );
+
 	var tap=0;
     $scope.submitForm = function (formData){
 
     }
+
+
 });
 
 ////graph
