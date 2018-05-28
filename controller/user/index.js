@@ -1,6 +1,7 @@
 app.controller('index', function($scope, $rootScope, $http) {
 	$rootScope.titulo = "Variables iniciales";
     $scope.showGrap=false;
+    $scope.formData = {};
 
     $http({
         method: "POST",
@@ -19,11 +20,12 @@ app.controller('index', function($scope, $rootScope, $http) {
     );
 
 	var tap=0;
-    $scope.submitForm = function (formData){
+    $scope.submitForm = function (formDat){
+        mostrar=formDat['resp2'];
         $http({
             method: "POST",
             url: "services/insertVaria.php",
-            data:$.param(formData),
+            data:$.param(formDat),
             headers: {
                 'Content-Type': 'application/x-www-form-urlencoded;charset=utf-8'
             }

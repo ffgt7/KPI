@@ -8,7 +8,7 @@
             <form name="indi" novalidate>
                 <div class="columna-4" ng-repeat="v in variables">
                     <div class="form-grupo form-texto-animado">
-                        <input type="text" class="input-text" required name="var{{$index}}" ng-model="formData.varMedi[$index]" ng-pattern="/^[0-9.]*$/">
+                        <input type="text" class="input-text" required name="var{{$index}}" ng-model="formData.resp2[$index]" ng-pattern="/^[0-9.]*$/">
                         <label for="nombre">% {{v.nameVariable}}</label>
                         <span ng-show="!indi.$pristine && indi.var{{$index}}.$error.required" class="error letra">campo requerido</span>
                         <span ng-show="!indi.$pristine && indi.var{{$index}}.$error.pattern" class="error letra">solo números</span>
