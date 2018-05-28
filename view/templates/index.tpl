@@ -6,28 +6,12 @@
         </div>
         <div class="card-contenido tabla-responsive">
             <form name="indi" novalidate>
-                <div class="columna-4">
+                <div class="columna-4" ng-repeat="v in variables">
                     <div class="form-grupo form-texto-animado">
-                        <input type="text" class="input-text" required name="satisClient" ng-model="formData.satisClient" ng-pattern="/^[0-9.]*$/">
-                        <label for="nombre">% satisfacción cliente interno</label>
-                        <span ng-show="!indi.$pristine && indi.satisClient.$error.required" class="error letra">campo requerido</span>
-                        <span ng-show="!indi.$pristine && indi.satisClient.$error.pattern" class="error letra">solo números</span>
-                    </div>
-                </div>
-                <div class="columna-4">
-                    <div class="form-grupo form-texto-animado">
-                        <input type="text" class="input-text" required name="timeEntre" ng-model="formData.timeEntre" ng-pattern="/^[0-9.]*$/">
-                        <label for="cuanta" >% tiempos de entrega</label>
-                        <span ng-show="!indi.$pristine && indi.timeEntre.$error.required" class="error letra">Campo requerido</span>
-                        <span ng-show="!indi.$pristine && indi.timeEntre.$error.pattern" class="error letra">solo números</span>
-                    </div>
-                </div>
-                <div class="columna-4">
-                    <div class="form-grupo form-texto-animado">
-                        <input type="text" class="input-text" required name="satisWork" ng-model="formData.satisWork" ng-pattern="/^[0-9.]*$/">
-                        <label for="correoIns" >% indice de satisfacción laboral</label>
-                        <span ng-show="!indi.$pristine && indi.satisWork.$error.required" class="error letra">Campo requerido</span>
-                        <span ng-show="!indi.$pristine && indi.satisWork.$error.pattern" class="error letra">solo números</span>
+                        <input type="text" class="input-text" required name="var{{$index}}" ng-model="formData.varMedi[$index]" ng-pattern="/^[0-9.]*$/">
+                        <label for="nombre">{{v.nameVariable}}</label>
+                        <span ng-show="!indi.$pristine && indi.var{{$index}}.$error.required" class="error letra">campo requerido</span>
+                        <span ng-show="!indi.$pristine && indi.var{{$index}}.$error.pattern" class="error letra">solo números</span>
                     </div>
                 </div>
                 <button type="submit" class="btn form odoo pull-right" ng-click="submitForm(formData)" ng-disabled="!indi.$valid">

@@ -11,10 +11,10 @@ app.controller('index', function($scope, $rootScope, $http) {
         }
     }).then(
         function success(response) {
-            $scope.correoCoor = response.data.correoInstitucional;
+            $scope.variables= response.data;
         },
         function error(response) {
-            alert('Se produjo un error');
+            alert('Se produjo un error al cargar las variables');
         }
     );
 
